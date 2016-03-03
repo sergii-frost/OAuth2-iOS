@@ -1,0 +1,369 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		144AF6B938DFBC29D1FA8CEA /* Pods_OAuth2_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305B228BD6E41B0F0C98ADCD /* Pods_OAuth2_Swift.framework */; };
+		455CA50E1C8870720084E1DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455CA50D1C8870720084E1DC /* AppDelegate.swift */; };
+		455CA5101C8870720084E1DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455CA50F1C8870720084E1DC /* ViewController.swift */; };
+		455CA5131C8870720084E1DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455CA5111C8870720084E1DC /* Main.storyboard */; };
+		455CA5151C8870720084E1DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 455CA5141C8870720084E1DC /* Assets.xcassets */; };
+		455CA5181C8870720084E1DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455CA5161C8870720084E1DC /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		305B228BD6E41B0F0C98ADCD /* Pods_OAuth2_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OAuth2_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		455CA50A1C8870720084E1DC /* OAuth2-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OAuth2-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		455CA50D1C8870720084E1DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		455CA50F1C8870720084E1DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		455CA5121C8870720084E1DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		455CA5141C8870720084E1DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		455CA5171C8870720084E1DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		455CA5191C8870720084E1DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60F9A3F23D9404C06D60990B /* Pods-OAuth2-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAuth2-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-OAuth2-Swift/Pods-OAuth2-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		E71AC327C32C944E8356F152 /* Pods-OAuth2-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAuth2-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OAuth2-Swift/Pods-OAuth2-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		455CA5071C8870720084E1DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				144AF6B938DFBC29D1FA8CEA /* Pods_OAuth2_Swift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		34DBA70E8216BED098F1B681 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				305B228BD6E41B0F0C98ADCD /* Pods_OAuth2_Swift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		455CA5011C8870720084E1DC = {
+			isa = PBXGroup;
+			children = (
+				455CA50C1C8870720084E1DC /* OAuth2-Swift */,
+				455CA50B1C8870720084E1DC /* Products */,
+				DD3929D226077C08BDC9DF0C /* Pods */,
+				34DBA70E8216BED098F1B681 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		455CA50B1C8870720084E1DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				455CA50A1C8870720084E1DC /* OAuth2-Swift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		455CA50C1C8870720084E1DC /* OAuth2-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				455CA50D1C8870720084E1DC /* AppDelegate.swift */,
+				455CA50F1C8870720084E1DC /* ViewController.swift */,
+				455CA5111C8870720084E1DC /* Main.storyboard */,
+				455CA5141C8870720084E1DC /* Assets.xcassets */,
+				455CA5161C8870720084E1DC /* LaunchScreen.storyboard */,
+				455CA5191C8870720084E1DC /* Info.plist */,
+			);
+			path = "OAuth2-Swift";
+			sourceTree = "<group>";
+		};
+		DD3929D226077C08BDC9DF0C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E71AC327C32C944E8356F152 /* Pods-OAuth2-Swift.debug.xcconfig */,
+				60F9A3F23D9404C06D60990B /* Pods-OAuth2-Swift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		455CA5091C8870720084E1DC /* OAuth2-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 455CA51C1C8870720084E1DC /* Build configuration list for PBXNativeTarget "OAuth2-Swift" */;
+			buildPhases = (
+				E4E70110043E49A77E408E79 /* Check Pods Manifest.lock */,
+				455CA5061C8870720084E1DC /* Sources */,
+				455CA5071C8870720084E1DC /* Frameworks */,
+				455CA5081C8870720084E1DC /* Resources */,
+				DF3FCDEBB3126176485843B1 /* Embed Pods Frameworks */,
+				7CACB109DDB389FC9E3F16EE /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OAuth2-Swift";
+			productName = "OAuth2-Swift";
+			productReference = 455CA50A1C8870720084E1DC /* OAuth2-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		455CA5021C8870720084E1DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = FrostDigital;
+				TargetAttributes = {
+					455CA5091C8870720084E1DC = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 455CA5051C8870720084E1DC /* Build configuration list for PBXProject "OAuth2-Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 455CA5011C8870720084E1DC;
+			productRefGroup = 455CA50B1C8870720084E1DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				455CA5091C8870720084E1DC /* OAuth2-Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		455CA5081C8870720084E1DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				455CA5181C8870720084E1DC /* LaunchScreen.storyboard in Resources */,
+				455CA5151C8870720084E1DC /* Assets.xcassets in Resources */,
+				455CA5131C8870720084E1DC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7CACB109DDB389FC9E3F16EE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OAuth2-Swift/Pods-OAuth2-Swift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF3FCDEBB3126176485843B1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OAuth2-Swift/Pods-OAuth2-Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4E70110043E49A77E408E79 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		455CA5061C8870720084E1DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				455CA5101C8870720084E1DC /* ViewController.swift in Sources */,
+				455CA50E1C8870720084E1DC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		455CA5111C8870720084E1DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				455CA5121C8870720084E1DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		455CA5161C8870720084E1DC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				455CA5171C8870720084E1DC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		455CA51A1C8870720084E1DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		455CA51B1C8870720084E1DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		455CA51D1C8870720084E1DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E71AC327C32C944E8356F152 /* Pods-OAuth2-Swift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "OAuth2-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "FD.OAuth2-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		455CA51E1C8870720084E1DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60F9A3F23D9404C06D60990B /* Pods-OAuth2-Swift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "OAuth2-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "FD.OAuth2-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		455CA5051C8870720084E1DC /* Build configuration list for PBXProject "OAuth2-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				455CA51A1C8870720084E1DC /* Debug */,
+				455CA51B1C8870720084E1DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		455CA51C1C8870720084E1DC /* Build configuration list for PBXNativeTarget "OAuth2-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				455CA51D1C8870720084E1DC /* Debug */,
+				455CA51E1C8870720084E1DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 455CA5021C8870720084E1DC /* Project object */;
+}
