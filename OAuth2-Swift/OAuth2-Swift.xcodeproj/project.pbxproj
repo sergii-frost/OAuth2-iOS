@@ -13,6 +13,8 @@
 		455CA5131C8870720084E1DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455CA5111C8870720084E1DC /* Main.storyboard */; };
 		455CA5151C8870720084E1DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 455CA5141C8870720084E1DC /* Assets.xcassets */; };
 		455CA5181C8870720084E1DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455CA5161C8870720084E1DC /* LaunchScreen.storyboard */; };
+		455CA5241C887CE10084E1DC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455CA5231C887CE10084E1DC /* Constants.swift */; };
+		455CA5271C8897DC0084E1DC /* UITextView+Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455CA5261C8897DC0084E1DC /* UITextView+Scroll.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,9 @@
 		455CA5141C8870720084E1DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		455CA5171C8870720084E1DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		455CA5191C8870720084E1DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		455CA5231C887CE10084E1DC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		455CA5251C88835E0084E1DC /* OAuth2-Swift-Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OAuth2-Swift-Bridging.h"; sourceTree = "<group>"; };
+		455CA5261C8897DC0084E1DC /* UITextView+Scroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Scroll.swift"; sourceTree = "<group>"; };
 		60F9A3F23D9404C06D60990B /* Pods-OAuth2-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAuth2-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-OAuth2-Swift/Pods-OAuth2-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		E71AC327C32C944E8356F152 /* Pods-OAuth2-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAuth2-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OAuth2-Swift/Pods-OAuth2-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,12 +74,15 @@
 		455CA50C1C8870720084E1DC /* OAuth2-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				455CA5261C8897DC0084E1DC /* UITextView+Scroll.swift */,
 				455CA50D1C8870720084E1DC /* AppDelegate.swift */,
 				455CA50F1C8870720084E1DC /* ViewController.swift */,
 				455CA5111C8870720084E1DC /* Main.storyboard */,
 				455CA5141C8870720084E1DC /* Assets.xcassets */,
 				455CA5161C8870720084E1DC /* LaunchScreen.storyboard */,
 				455CA5191C8870720084E1DC /* Info.plist */,
+				455CA5231C887CE10084E1DC /* Constants.swift */,
+				455CA5251C88835E0084E1DC /* OAuth2-Swift-Bridging.h */,
 			);
 			path = "OAuth2-Swift";
 			sourceTree = "<group>";
@@ -212,6 +220,8 @@
 			files = (
 				455CA5101C8870720084E1DC /* ViewController.swift in Sources */,
 				455CA50E1C8870720084E1DC /* AppDelegate.swift in Sources */,
+				455CA5271C8897DC0084E1DC /* UITextView+Scroll.swift in Sources */,
+				455CA5241C887CE10084E1DC /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,8 +335,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "OAuth2-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "FD.OAuth2-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = "se.frostdigital.OAuth2-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OAuth2-Swift/OAuth2-Swift-Bridging.h";
 			};
 			name = Debug;
 		};
@@ -337,8 +348,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "OAuth2-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "FD.OAuth2-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = "se.frostdigital.OAuth2-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OAuth2-Swift/OAuth2-Swift-Bridging.h";
 			};
 			name = Release;
 		};
