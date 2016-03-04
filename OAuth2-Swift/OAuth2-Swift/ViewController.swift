@@ -9,6 +9,8 @@
 import UIKit
 import SVProgressHUD
 import AFOAuth2Manager
+import SwiftyJSON
+import SDWebImage
 
 extension String {
     public func urlEncode() -> String {
@@ -26,17 +28,16 @@ class ViewController: UIViewController {
 
     //MARK: IBOutlets
     @IBOutlet weak var usernameTF: UITextField!
-    @IBOutlet weak var passwordTF: UITextField!
     
     @IBOutlet weak var outputTV: UITextView!
     
+    @IBOutlet weak var avatar: UIImageView!
     var isObserved = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         outputTV?.text = ""
-    }
-    
+    }    
 
     @IBAction func authenticate() {
         
@@ -68,12 +69,22 @@ class ViewController: UIViewController {
                             // [8] Set credential in header
                             manager.requestSerializer.setValue("Bearer \(cred.accessToken)",
                                 forHTTPHeaderField: "Authorization")
+                            manager.responseSerializer = AFJSONResponseSerializer()
                             
                             // [9] Get Information about the user
-                            manager.GET("https://api.instagram.com/v1/users/self",
+                            let user = self.usernameTF?.text?.isEmpty == true ? "self" : self.usernameTF?.text
+                            let userInfoUrl = "https://api.instagram.com/v1/users/" + user!
+                            manager.GET(userInfoUrl,
                                 parameters: ["access_token": cred.accessToken],
                                 success: { (op: AFHTTPRequestOperation!, response: AnyObject) -> Void in
-                                    self.consoleOut(response.description)
+                                    let json = JSON(response)
+                                    if let profilePicture = json["data"]["profile_picture"].string {
+                                        self.consoleOut("Profile Picture url: \(profilePicture)")
+                                        self.avatar?.sd_setImageWithURL(NSURL(string: profilePicture))
+                                    } else {
+                                        self.consoleOut(response.description)
+                                    }
+                                    
                                 }, failure: { (op: AFHTTPRequestOperation?, error: NSError) -> Void in
                                     self.consoleOut(error.description)
                             })

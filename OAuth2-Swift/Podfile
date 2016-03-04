@@ -4,8 +4,9 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'OAuth2-Swift' do
-    pod 'NXOAuth2Client', '1.2.8'
     pod 'AFOAuth2Manager', :git => 'https://github.com/AFNetworking/AFOAuth2Manager.git', :commit => '9dfe990'
     pod 'SVProgressHUD', '~> 1.1'
+    pod 'SDWebImage', '~> 3.7'
+    pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 end
 

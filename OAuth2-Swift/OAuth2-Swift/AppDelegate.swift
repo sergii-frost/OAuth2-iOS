@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import NXOAuth2Client
 
 let kAppLaunchedWithAuthRedirectNotification: String! = "AppLaunchedWithAuthRedirectNotification"
 

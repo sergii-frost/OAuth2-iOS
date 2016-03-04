@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IDJ-fD-Bs9">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Instagram user or self if empty" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IDJ-fD-Bs9">
                                 <rect key="frame" x="20" y="40" width="280" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="NC0-fC-eMh"/>
@@ -25,51 +26,51 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tcY-Rw-bDe">
-                                <rect key="frame" x="20" y="78" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnE-rs-5cb">
-                                <rect key="frame" x="20" y="116" width="280" height="30"/>
+                                <rect key="frame" x="20" y="78" width="280" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ebq-3K-dmX"/>
                                 </constraints>
-                                <state key="normal" title="Authenticate"/>
+                                <state key="normal" title="Get user image"/>
                                 <connections>
                                     <action selector="authenticate" destination="BYZ-38-t0r" eventType="touchUpInside" id="xDe-Y2-Krx"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="V7q-jn-d3b">
-                                <rect key="frame" x="20" y="154" width="280" height="394"/>
+                                <rect key="frame" x="20" y="404" width="280" height="144"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZS0-Z8-z3M">
+                                <rect key="frame" x="20" y="116" width="280" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZS0-Z8-z3M" secondAttribute="height" multiplier="1:1" id="6mD-k3-erV"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.94117647409439087" green="0.50196081399917603" blue="0.18823529779911041" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="tcY-Rw-bDe" firstAttribute="leading" secondItem="IDJ-fD-Bs9" secondAttribute="leading" id="1eC-sP-B2x"/>
                             <constraint firstAttribute="trailing" secondItem="XnE-rs-5cb" secondAttribute="trailing" constant="20" id="3Ri-Ec-M1L"/>
                             <constraint firstItem="IDJ-fD-Bs9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="7Zv-GI-Vff"/>
                             <constraint firstAttribute="trailing" secondItem="V7q-jn-d3b" secondAttribute="trailing" constant="20" id="8QH-Ji-QBC"/>
-                            <constraint firstItem="V7q-jn-d3b" firstAttribute="top" secondItem="XnE-rs-5cb" secondAttribute="bottom" constant="8" id="L0d-cs-lv6"/>
+                            <constraint firstItem="V7q-jn-d3b" firstAttribute="top" secondItem="ZS0-Z8-z3M" secondAttribute="bottom" constant="8" id="9xh-S6-b6p"/>
+                            <constraint firstItem="ZS0-Z8-z3M" firstAttribute="top" secondItem="XnE-rs-5cb" secondAttribute="bottom" constant="8" id="A21-kT-NmI"/>
+                            <constraint firstItem="XnE-rs-5cb" firstAttribute="top" secondItem="IDJ-fD-Bs9" secondAttribute="bottom" constant="8" id="AYO-tN-ya3"/>
+                            <constraint firstItem="ZS0-Z8-z3M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="D9J-bN-DuW"/>
+                            <constraint firstAttribute="trailing" secondItem="ZS0-Z8-z3M" secondAttribute="trailing" constant="20" id="IOa-kk-uOH"/>
                             <constraint firstAttribute="trailing" secondItem="IDJ-fD-Bs9" secondAttribute="trailing" constant="20" id="MbX-31-6Uh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="V7q-jn-d3b" secondAttribute="bottom" constant="20" id="OZc-Qj-9Sb"/>
-                            <constraint firstItem="tcY-Rw-bDe" firstAttribute="top" secondItem="IDJ-fD-Bs9" secondAttribute="bottom" constant="8" id="QqC-oa-0Ow"/>
-                            <constraint firstItem="tcY-Rw-bDe" firstAttribute="trailing" secondItem="IDJ-fD-Bs9" secondAttribute="trailing" id="Qvl-gx-lRw"/>
                             <constraint firstItem="XnE-rs-5cb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="epD-P0-JIJ"/>
-                            <constraint firstItem="XnE-rs-5cb" firstAttribute="top" secondItem="tcY-Rw-bDe" secondAttribute="bottom" constant="8" id="gjo-78-bi4"/>
-                            <constraint firstItem="tcY-Rw-bDe" firstAttribute="height" secondItem="IDJ-fD-Bs9" secondAttribute="height" id="j4x-lV-vfg"/>
                             <constraint firstItem="V7q-jn-d3b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="kHR-Pg-Ngg"/>
                             <constraint firstItem="IDJ-fD-Bs9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="mi8-Eo-MBR"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="avatar" destination="ZS0-Z8-z3M" id="9Re-TO-0R4"/>
                         <outlet property="outputTV" destination="V7q-jn-d3b" id="I2p-wg-W5W"/>
-                        <outlet property="passwordTF" destination="tcY-Rw-bDe" id="Pjt-oL-qdV"/>
                         <outlet property="usernameTF" destination="IDJ-fD-Bs9" id="9Kv-nv-OQN"/>
                     </connections>
                 </viewController>
