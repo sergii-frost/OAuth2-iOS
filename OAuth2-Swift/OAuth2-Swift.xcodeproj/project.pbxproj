@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		144AF6B938DFBC29D1FA8CEA /* Pods_OAuth2_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305B228BD6E41B0F0C98ADCD /* Pods_OAuth2_Swift.framework */; };
+		450B9F8E1C8DBE6B00A7B3B8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B9F8D1C8DBE6B00A7B3B8 /* LoginViewController.swift */; };
 		455CA50E1C8870720084E1DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455CA50D1C8870720084E1DC /* AppDelegate.swift */; };
 		455CA5101C8870720084E1DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455CA50F1C8870720084E1DC /* ViewController.swift */; };
 		455CA5131C8870720084E1DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455CA5111C8870720084E1DC /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		305B228BD6E41B0F0C98ADCD /* Pods_OAuth2_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OAuth2_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		450B9F8D1C8DBE6B00A7B3B8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		455CA50A1C8870720084E1DC /* OAuth2-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OAuth2-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		455CA50D1C8870720084E1DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		455CA50F1C8870720084E1DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				455CA5261C8897DC0084E1DC /* UITextView+Scroll.swift */,
 				455CA50D1C8870720084E1DC /* AppDelegate.swift */,
 				455CA50F1C8870720084E1DC /* ViewController.swift */,
+				450B9F8D1C8DBE6B00A7B3B8 /* LoginViewController.swift */,
 				455CA5111C8870720084E1DC /* Main.storyboard */,
 				455CA5141C8870720084E1DC /* Assets.xcassets */,
 				455CA5161C8870720084E1DC /* LaunchScreen.storyboard */,
@@ -221,6 +224,7 @@
 				455CA5101C8870720084E1DC /* ViewController.swift in Sources */,
 				455CA50E1C8870720084E1DC /* AppDelegate.swift in Sources */,
 				455CA5271C8897DC0084E1DC /* UITextView+Scroll.swift in Sources */,
+				450B9F8E1C8DBE6B00A7B3B8 /* LoginViewController.swift in Sources */,
 				455CA5241C887CE10084E1DC /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

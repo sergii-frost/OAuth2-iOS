@@ -54,36 +54,27 @@ class ViewController: UIViewController {
                     self.consoleOut("Code to authenticate: \(code)")
                     
                     // [6] carry on oauth2 code auth grant flow with AFOAuth2Manager
-                    let manager = AFOAuth2Manager(baseURL: NSURL(string: kInstagramBaseUrl),
-                        clientID: kInstagramClientID,
-                        secret: kInstagramClientSecret)
+                    let manager = AFOAuth2Manager(baseURL: NSURL(string: kFortumBaseUrl),
+                        clientID: kFortumClientID,
+                        secret: kFortumClientSecret)
                     manager.useHTTPBasicAuthentication = false
                     
                     // [7] exchange authorization code for access token
-                    manager.authenticateUsingOAuthWithURLString("oauth/access_token",
+                    manager.authenticateUsingOAuthWithURLString(kFortumTokenUrl,
                         code: code,
-                        redirectURI: kInstagramRedirection,
+                        redirectURI: kFortumRedirectUrl,
                         success: { (cred: AFOAuthCredential!) -> Void in
-                            
+                            self.consoleOut("Access Token: \(cred.accessToken)")
                             // [8] Set credential in header
                             manager.requestSerializer.setValue("Bearer \(cred.accessToken)",
                                 forHTTPHeaderField: "Authorization")
                             manager.responseSerializer = AFJSONResponseSerializer()
                             
                             // [9] Get Information about the user
-                            let user = self.usernameTF?.text?.isEmpty == true ? "self" : self.usernameTF?.text
-                            let userInfoUrl = kInstagramBaseUrl + "/v1/users/" + user!
-                            manager.GET(userInfoUrl,
+                            manager.GET(kFortumUserInfoUrl,
                                 parameters: ["access_token": cred.accessToken],
                                 success: { (op: AFHTTPRequestOperation!, response: AnyObject) -> Void in
-                                    let json = JSON(response)
-                                    if let profilePicture = json["data"]["profile_picture"].string {
-                                        self.consoleOut("Profile Picture url: \(profilePicture)")
-                                        self.avatar?.sd_setImageWithURL(NSURL(string: profilePicture))
-                                    } else {
-                                        self.consoleOut(response.description)
-                                    }
-                                    
+                                    self.consoleOut(response.description)
                                 }, failure: { (op: AFHTTPRequestOperation?, error: NSError) -> Void in
                                     self.consoleOut(error.description)
                             })
@@ -94,13 +85,6 @@ class ViewController: UIViewController {
                     self.isObserved = true
             })
         }
-        
-        authorize()
-    }
-    
-    private func authorize() {        
-        let authorizationUrl: String! = kInstagramBaseUrl + "/oauth/authorize/?client_id=\(kInstagramClientID)&redirect_uri=\(kInstagramRedirection.urlEncode())&response_type=code"
-        UIApplication.sharedApplication().openURL(NSURL(string: authorizationUrl)!)
     }
     
     
@@ -145,5 +129,15 @@ class ViewController: UIViewController {
         outputTV.scrollToBotom()
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "SSOLoginSegue" {
+            guard let loginVC = segue.destinationViewController as? LoginViewController else {
+                return
+            }
+            
+            loginVC.baseUrl = kFortumAuthUrl + "?response_type=code&&scope=openid&client_id=\(kFortumClientID)&redirect_uri=\(kFortumRedirectUrl.urlEncode())"
+            authenticate()
+        }
+    }
 }
 
