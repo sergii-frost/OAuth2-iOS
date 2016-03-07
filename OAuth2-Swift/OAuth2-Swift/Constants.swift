@@ -12,6 +12,7 @@ let kWebClientSecret:       String! = "uohU7xw4OrnLtvbONfypQXq6"
 let kBaseUrl:               String! = "https://www.googleapis.com"
 let kAuthGDriveReadonlyUrl: String! = "/auth/drive.readonly"
 
+let kInstagramBaseUrl:      String! = "https://api.instagram.com"
 let kInstagramClientID:     String! = "fe37b127260c435abd1454c15e929e7c"
 let kInstagramClientSecret: String! = "4b87025b61f34959b6f7c958637756a4"
 let kInstagramRedirection:  String! = "oauth2-swift://oauth-callback/instagram"

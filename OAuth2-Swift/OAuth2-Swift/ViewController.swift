@@ -37,11 +37,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         outputTV?.text = ""
-    }    
+    }
 
     @IBAction func authenticate() {
         
-        let baseURL = NSURL(string: "https://api.instagram.com")
         
         if !isObserved {
             // 2 Add observer
@@ -55,7 +54,7 @@ class ViewController: UIViewController {
                     self.consoleOut("Code to authenticate: \(code)")
                     
                     // [6] carry on oauth2 code auth grant flow with AFOAuth2Manager
-                    let manager = AFOAuth2Manager(baseURL: baseURL,
+                    let manager = AFOAuth2Manager(baseURL: NSURL(string: kInstagramBaseUrl),
                         clientID: kInstagramClientID,
                         secret: kInstagramClientSecret)
                     manager.useHTTPBasicAuthentication = false
@@ -73,7 +72,7 @@ class ViewController: UIViewController {
                             
                             // [9] Get Information about the user
                             let user = self.usernameTF?.text?.isEmpty == true ? "self" : self.usernameTF?.text
-                            let userInfoUrl = "https://api.instagram.com/v1/users/" + user!
+                            let userInfoUrl = kInstagramBaseUrl + "/v1/users/" + user!
                             manager.GET(userInfoUrl,
                                 parameters: ["access_token": cred.accessToken],
                                 success: { (op: AFHTTPRequestOperation!, response: AnyObject) -> Void in
@@ -100,7 +99,7 @@ class ViewController: UIViewController {
     }
     
     private func authorize() {        
-        let authorizationUrl: String! = "https://api.instagram.com/oauth/authorize/?client_id=\(kInstagramClientID)&redirect_uri=\(kInstagramRedirection.urlEncode())&response_type=code"
+        let authorizationUrl: String! = kInstagramBaseUrl + "/oauth/authorize/?client_id=\(kInstagramClientID)&redirect_uri=\(kInstagramRedirection.urlEncode())&response_type=code"
         UIApplication.sharedApplication().openURL(NSURL(string: authorizationUrl)!)
     }
     
@@ -139,10 +138,11 @@ class ViewController: UIViewController {
 
     private func consoleOut(text: String!) {
         print(text)
-        if outputTV != nil {
-            outputTV.text = outputTV.text + "\n" + text
-            outputTV.scrollToBotom()
+        guard outputTV != nil else {
+            return
         }
+        outputTV.text = outputTV.text + "\n" + text
+        outputTV.scrollToBotom()
     }
 
 }
